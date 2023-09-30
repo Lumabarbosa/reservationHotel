@@ -1,0 +1,45 @@
+SISTEMA RESERVA DE HOTEL
+
+Um hotel deseja registrar os dados de reservas feitas por telefone, então resolveu criar um sistema
+para isso;
+• Para cada clientes devem ser registrados CPF, nome, telefone e sexo. Deve ser registrado também
+a quantidade de pessoas que participaram da reserva.
+• É interessante registrar a nacionalidade do Cliente.
+• Os clientes podem reservar um tipo de quarto do hotel para uma determinada data e por uma
+certa quantidade de dias.
+• Os quartos são cadastrados por número, andar e tipo.
+• Para a confirmação da reserva é necessário fazer um pagamento de no mínimo 50% do valor,
+através de cartão de crédito. Devem ser registrados os dados da operadora com código e nome da
+operadora. Do cliente basta o número do cartão de crédito.
+• As reservas devem apresentar um status, indicando se a reserva foi confirmada, cancelada ou
+utilizada.
+
+RESOLUÇÃO
+
+1) Criar projeto:
+    a) npm install --D yarn
+    b) yarn init -y
+    c) npm add --D typescript
+    d) yarn add express
+    c) yarn tsc --init
+    d) npm add @types/express --D
+
+2) Criar pasta src;
+3) Em src criar arquivo index.ts
+4) Em index.ts digitar o codigo:
+
+import express from "express";  
+
+const server = express();
+
+server.get('/', (req, res) => {
+  return res.send("Hello World");
+});
+
+server.listen(3000);
+
+5) No terminal executar comando: yarn tsc
+6) No arquivo tsconfig.json altere linha 58 para: "outDir": "./dist",
+7) Executar comando para criar index.js na pasta dist: yarn tsc 
+8) Executar comando: node .\dist\index.js
+9) Abrir navegador: http://localhost:3000/
