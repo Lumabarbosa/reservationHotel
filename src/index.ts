@@ -3,6 +3,7 @@ import Cliente from "./cliente";
 import Reserva from "./reserva";
 import Cartao from "./cartao";
 import Quarto from "./quarto";
+import Data from "./data";
 
 
 const server = express();
@@ -31,6 +32,10 @@ server.get('/reserva', (req, res) => {
   return res.send(reservaInfo);
 });
 
+server.get('/data', (req, res) => {
+  const dataInfo = data.toString;
+  return res.send(dataInfo)
+})
 
 server.listen(8000);
 
@@ -44,5 +49,6 @@ console.log(quarto.toString);
 const cartao = new Cartao (cliente, 123456789, 123, "Visa");
 console.log(cartao.toString);
 
-const reserva = new Reserva (cliente, quarto, cartao, "Confirmada");
+const data = new Data("22-10-2023")
+const reserva = new Reserva (cliente, quarto, cartao, data, "Confirmada");
 console.log(reserva.toString);

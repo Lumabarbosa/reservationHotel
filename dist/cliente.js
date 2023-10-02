@@ -27,8 +27,8 @@ utilizada.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 // Classe Cliente
-class Cliente {
-    constructor(cpf, nome, telefone, sexo, nacionalidade, qtdPessoas) {
+var Cliente = /** @class */ (function () {
+    function Cliente(cpf, nome, telefone, sexo, nacionalidade, qtdPessoas) {
         this.cpf = cpf;
         this.nome = nome;
         this.telefone = telefone;
@@ -36,50 +36,97 @@ class Cliente {
         this.nacionalidade = nacionalidade;
         this.qtdPessoas = qtdPessoas;
     }
-    get getCpf() {
-        return this.cpf;
-    }
-    get getNome() {
-        return this.nome;
-    }
-    get getTelefone() {
-        return this.telefone;
-    }
-    get getSexo() {
-        return this.sexo;
-    }
-    get getNacionalidade() {
-        return this.nacionalidade;
-    }
-    get getQtdPessoas() {
-        return this.qtdPessoas;
-    }
-    set setCpf(cpf) {
-        this.cpf = cpf;
-    }
-    set setNome(nome) {
-        this.nome = nome;
-    }
-    set setTelefone(telefone) {
-        this.telefone = telefone;
-    }
-    set setSexo(sexo) {
-        this.sexo = sexo;
-    }
-    set setNacionalidade(nacionalidade) {
-        this.nacionalidade = nacionalidade;
-    }
-    set setQtdPessoas(qtdPessoas) {
-        this.qtdPessoas = qtdPessoas;
-    }
-    get toString() {
-        return `\nINFORMAÇÕES CLIENTE
-                Cliente: ${this.nome}
-                CPF: ${this.cpf}
-                Telefone: ${this.telefone}
-                Sexo: ${this.sexo}
-                Nacionalidade: ${this.nacionalidade}
-                Quantidade de pessoas: ${this.qtdPessoas}`;
-    }
-}
+    Object.defineProperty(Cliente.prototype, "getCpf", {
+        get: function () {
+            return this.cpf;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "getNome", {
+        get: function () {
+            return this.nome;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "getTelefone", {
+        get: function () {
+            return this.telefone;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "getSexo", {
+        get: function () {
+            return this.sexo;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "getNacionalidade", {
+        get: function () {
+            return this.nacionalidade;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "getQtdPessoas", {
+        get: function () {
+            return this.qtdPessoas;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "setCpf", {
+        set: function (cpf) {
+            this.cpf = cpf;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "setNome", {
+        set: function (nome) {
+            this.nome = nome;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "setTelefone", {
+        set: function (telefone) {
+            this.telefone = telefone;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "setSexo", {
+        set: function (sexo) {
+            this.sexo = sexo;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "setNacionalidade", {
+        set: function (nacionalidade) {
+            this.nacionalidade = nacionalidade;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "setQtdPessoas", {
+        set: function (qtdPessoas) {
+            this.qtdPessoas = qtdPessoas;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Cliente.prototype, "toString", {
+        get: function () {
+            return "\nINFORMA\u00C7\u00D5ES CLIENTE\n                Cliente: ".concat(this.nome, "\n                CPF: ").concat(this.cpf, "\n                Telefone: ").concat(this.telefone, "\n                Sexo: ").concat(this.sexo, "\n                Nacionalidade: ").concat(this.nacionalidade, "\n                Quantidade de pessoas: ").concat(this.qtdPessoas);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Cliente;
+}());
 exports.default = Cliente;

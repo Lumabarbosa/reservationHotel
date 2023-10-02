@@ -9,6 +9,7 @@ utilizada.
 import Cliente from "./cliente";
 import Quarto from "./quarto";
 import Cartao from "./cartao";
+import Data from "./data";
 
 // Classe Reserva
 class Reserva{
@@ -16,12 +17,14 @@ class Reserva{
    private cliente: Cliente;
    private quarto: Quarto;
    private cartao: Cartao;
-   private status: string; 
+   private data: Data;
+   private status: string;
         
-   constructor(cliente: Cliente, quarto: Quarto, cartao: Cartao, status: string){
+   constructor(cliente: Cliente, quarto: Quarto, cartao: Cartao, data: Data, status: string){
          this.cliente = cliente;
          this.quarto = quarto;
          this.cartao = cartao;
+         this.data = data;
          this.status = status;
    }
 
@@ -35,6 +38,9 @@ class Reserva{
 
     get getCartao(){
         return this.cartao;
+    }
+    get getData() {
+        return this.data;
     }
 
     get getStatus(){
@@ -53,15 +59,23 @@ class Reserva{
         this.cartao = cartao;
     }
 
+    set setData(data: Data){
+        this.data = data;
+    }
+
     set setStatus(status: string){
         this.status = status;
     }
+
+
+    //Analisar alguma forma de confirmar o limite do cartão
 
     get toString(): string {
         return `\nINFORMAÇÕES RESERVA
                 Cliente: ${this.cliente.getNome}
                 Numero Quarto: ${this.quarto.getnumeroQuarto} 
                 Cartão: ${this.cartao.getNumero}
+                Data: ${this.data.getData}
                 Status: ${this.status}`;
     }
 }
