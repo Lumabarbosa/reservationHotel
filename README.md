@@ -1,4 +1,7 @@
-Projeto de número 1 do Curso de Formação Acelerada em Programação (FAP) - Softex.
+#Projeto de número 1 
+
+##Curso de Formação Acelerada em Programação (FAP) - Softex.
 Turma: Back-End
 Professor: André Ribeiro
 Ano: 2023
+Integrantes: Ismael, Luma, Marcos Lemos, Timóteo Gomes, Walter Andrade
